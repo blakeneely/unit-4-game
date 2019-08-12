@@ -4,11 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crystals Collecter</title>
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Crystals Collector</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+    <div class="container">
+        <h1 class="title">CRYSTAL COLLECTOR</h1>
+
+        <div class="score-text">MAGIC NUMBER:</div>
+        <div id="magic-number" class="score-text"></div>
+
+        <div class="instructions">
+            <p>Each crystal has a hidden value that resets every round. Click each crystal to add to your score. Match the Magic Number and you win, go over and you lose. Good luck!</p>
+        </div>
+
+        <div class="gem-container">
+            <img src="assets/images/blue-gem.png" alt="blue gem" class="gem-image" id="blue-gem" value="">
+            <img src="assets/images/yellow-gem.png" alt="yellow gem" class="gem-image" id="yellow-gem">
+            <img src="assets/images/green-gem.png" alt="green gem" class="gem-image" id="green-gem">
+            <img src="assets/images/purple-gem.png" alt="purple gem" class="gem-image" id="purple-gem">
+
+
+        </div>
+
+        <div class="total-score">
+            <p class="score-text">YOUR SCORE:</p>
+            <p id="user-num" class="score-text"></p>
+        </div>
+
+
+        <div class="wins-losses">
+            <p class="wins">WINS: 0</p>
+            <p class="losses">LOSES: 0</p>
+        </div>
+
+    </div>
+
+
+
+    <script src="assets/javascript/game.js"></script>
 </body>
 </html>
