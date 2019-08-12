@@ -43,10 +43,28 @@ body {
     width: 50px;
     margin: .5em;
 }
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
 .gem-image:hover {
     cursor: pointer;
-    opacity: .3;
-    transition: .5s ease;
+    animation: bounce 1s;
+    /* opacity: .5;
+    transition: .3s ease; */
 }
 
 .wins-losses {

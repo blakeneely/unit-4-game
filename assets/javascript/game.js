@@ -4,7 +4,7 @@ $(document).ready(function() {
     var wins = 0;
     var losses = 0;
 
-    function getMagicNum(min, max) {                 // Assigns magicNum a number between 19 - 120
+    function getMagicNum(min, max) {                 // Assigns magicNum a number between min and max
         magicNum = Math.floor(Math.random() * (max - min +1)) + min;
         $("#magic-number").text(magicNum);
     };
@@ -39,16 +39,15 @@ $(document).ready(function() {
         }
     };
 
+    // ********** Main Game ***********
+
+    getMagicNum(19, 120);                           // Call assign magicNum a value between 19 - 120
+    assignValue();                                  // Assign random number to gem html value
+
     $(".gem-image").on("click", function(){         // On Click event for each gem, adds value to userNum and checks if win or lose
         userNum = parseInt(this.value) + parseInt(userNum);
         $("#user-num").text(userNum);
         checkWin();
     });
-
-
-    getMagicNum(19, 120);
-    assignValue();
-
-
 
 });
