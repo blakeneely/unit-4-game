@@ -6,7 +6,7 @@ This is fully mobile resposive logic game written in JavaScript using some jQuer
 
 ### Mobile View
 
-![crystal-collector-mobile](assets/images/crystalcollectormobile.png)
+![crystal-collector-mobile](assets/images/crystalcollectormobile.png | width=400)
 
 ### Desktop View
 
