@@ -3,6 +3,8 @@ $(document).ready(function() {
     var userNum = 0;
     var wins = 0;
     var losses = 0;
+    var winAudio = new Audio("assets/audio/win.mp3");
+    var loseAudio = new Audio("assets/audio/lose.mp3")
 
     function getMagicNum(min, max) {                 // Assigns magicNum a number between min and max
         magicNum = Math.floor(Math.random() * (max - min +1)) + min;
@@ -26,15 +28,17 @@ $(document).ready(function() {
 
     function checkWin() {                            // Checks if win or lose, alerts, adds wins or losses, updates html and resets game
         if (userNum === magicNum) {
-            alert("You win!")
+            // alert("You win!")
             gameStart();
             wins++;
+            winAudio.play();
             $(".wins").text("WINS: " + wins)
         }
         else if (userNum > magicNum) {
-            alert("You lose!")
+            // alert("You lose!")
             gameStart();
             losses++;
+            loseAudio.play();
             $(".losses").text("LOSSES: " + losses)
         }
     };
