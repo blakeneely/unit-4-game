@@ -11,7 +11,8 @@ body {
 }
 
 .container h1 {
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: bold;
     margin: 1em 0 1em 0;
 }
 
@@ -39,10 +40,11 @@ body {
     margin: 1em 0 1em 0;
 }
 .gem-image {
-    width: 60px;
-    margin: 1em;
+    width: 50px;
+    margin: .5em;
 }
 .gem-image:hover {
+    cursor: pointer;
     opacity: .3;
     transition: .5s ease;
 }
@@ -55,13 +57,15 @@ body {
 @media only screen and (min-width: 600px) {
     .container h1 {
         font-size: 50px;
+        font-weight: normal;
     }
-    
+
     .container {
         max-width: 800px;
     }
     .gem-image {
         width: 80px;
+        margin: 1em;
     }
 }
 
